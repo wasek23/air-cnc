@@ -1,0 +1,42 @@
+.btn{
+    &,
+    &:link,
+    &:visited{
+        color: #fff;
+        background-image: linear-gradient(to right, $colorPrimaryDark, $colorPrimaryLight);
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        transition: .2s all ease;
+        position: relative;
+    
+        // Change for <button>
+        border: none;
+        cursor: pointer;
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+    }
+
+    &-radius{
+        padding: 1rem 2rem !important;
+        border-radius: 100px;
+        font-size: $defaultFontSize !important;
+
+        &:hover{
+            box-shadow: 0 1rem 2rem rgba($colorPrimary, .2);
+            color: #fff !important;
+        }
+        &:active,
+        &:focus{
+            outline: none;
+            transform: translateY(-.1rem);
+            box-shadow: 0 .5rem 1rem rgba($colorPrimary, .2);
+        }
+    }
+}

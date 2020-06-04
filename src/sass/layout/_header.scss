@@ -1,0 +1,15 @@
+header{
+    width: 100%;
+    z-index: 500;
+    border-bottom: 1px solid #e1e1e1;
+    padding: .5rem;
+}
+
+.navbar{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all .5s ease-in-out;
+    }
+}
