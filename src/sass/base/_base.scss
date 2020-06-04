@@ -41,22 +41,10 @@ body{
     overflow-x: hidden;
 }
 
-section{
-    padding: 5rem 0;
-
-    > h2{
-        margin-bottom: 3rem;
-    }
-}
-
 .container{
     max-width: $gridWidth;
     margin: 0 auto;
-    padding: 0 1rem;
-    
-    &:not(:last-child){
-        margin-bottom: $gutterVertical;
-    }
+    padding: 0 1.5rem;
 }
 
 ::selection{

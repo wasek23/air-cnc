@@ -1,0 +1,22 @@
+// Main Section
+.mainSection{
+    .container{
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 5rem;
+        padding: 5rem 1.5rem;
+    }
+}
+
+// Showcase
+.showcase{
+    >div:not(:last-child){
+        margin-bottom: 5rem;
+    }
+
+    &Top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+}
