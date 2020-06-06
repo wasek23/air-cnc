@@ -1,0 +1,26 @@
+.experienceWrap{
+	grid-gap: 1.5rem;
+}
+.singleImg{
+	width: 100%;
+	border-radius: 3px;
+	margin-bottom: 7px;
+}
+.cityName{
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.cityName:hover{
+	color: #4EB8CB;
+}
+.cost{
+	color: #ABABAB;
+	font-size: 13px;
+}
+.star{
+	font-size: 12px;
+	margin-top: 7px;
+}
+.star svg{
+	color: #4EB8CB;
+}

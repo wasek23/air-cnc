@@ -1,7 +1,7 @@
 import React from 'react';
 
-const EntireApartmentHosteBySally = {
-	id: 5, thumb: "https://a0.muscache.com/im/pictures/c2085ece-0e90-45ff-af17-a455f4eac1bf.jpg?aki_policy=x_large", img: "https://a0.muscache.com/im/pictures/9bba8031-6d2b-4861-bedb-c33a78bc3c1d.jpg?aki_policy=large", permalink: "Entire apartment hosted by Sally", title: "Entire Apartment Hosted by Sally", location: "Glenelg, South Australia, Australia", cost: 218, guests: 2, bedrooms: 3, beds: 3, baths: 2, reviews: 55, star: 4.44, advantage: { "Entire home": "You’ll have the apartment to yourself.", "Sally is a Superhost": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.", "Free cancellation for 48 hours": "After that, cancel up to 5 days before check-in and get a full refund, minus the service fee." }, rules: <>
+const EntireApartmentHostedBySally = {
+	id: 5, thumb: "https://a0.muscache.com/im/pictures/c2085ece-0e90-45ff-af17-a455f4eac1bf.jpg?aki_policy=x_large", img: "https://a0.muscache.com/im/pictures/9bba8031-6d2b-4861-bedb-c33a78bc3c1d.jpg?aki_policy=large", permalink: "entire-apartment-hosted-by-sally", title: "Entire Apartment Hosted by Sally", city: "Glenelg", location: "Glenelg, South Australia, Australia", cost: 218, guests: 2, bedrooms: 3, beds: 3, baths: 2, reviews: 55, star: 4.44, advantage: { "Entire home": "You’ll have the apartment to yourself.", "Sally is a Superhost": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.", "Free cancellation for 48 hours": "After that, cancel up to 5 days before check-in and get a full refund, minus the service fee." }, rules: <>
 		<ul>
 			<li>Self check-in with lockbox</li>
 			<li>No smoking</li>
@@ -21,4 +21,4 @@ const EntireApartmentHosteBySally = {
 		Once a booking is confirmed, the access details are emailed to the guest a week before arrival.
 	</>
 };
-export default EntireApartmentHosteBySally;
+export default EntireApartmentHostedBySally;

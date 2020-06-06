@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ExperiencePost from '../Posts/ExperiencePost';
+import HomePost from '../Posts/HomePost';
 
+import experiencesData from '../../PostData/experienceData';
+import homesData from '../../PostData/homesData';
 const Showcase = () => {
+
     return (
         <div className="showcase">
             <div className="showcaseExperience grid4">
@@ -10,12 +15,9 @@ const Showcase = () => {
                     <Link to="/">See all &gt;</Link>
                 </div>
 
-                <div className="grid grid4">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                </div>
+                {experiencesData.length !== 0 && <div className="experienceWrap grid grid4">
+                    {experiencesData.map(singleExperience => <ExperiencePost experiencesData={singleExperience} key={singleExperience.id}></ExperiencePost>)}
+                </div>}
 
             </div>
             <div className="showcaseHome grid3">
@@ -24,11 +26,11 @@ const Showcase = () => {
                     <Link to="/">See all &gt;</Link>
                 </div>
 
-                <div className="grid grid3">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
+                {homesData.length !== 0 && <div className="grid grid3">
+                    {homesData.map(singleHome => <HomePost homesData={singleHome} key={singleHome.id}></HomePost>)}
                 </div>
+                }
+
             </div>
         </div>
     );

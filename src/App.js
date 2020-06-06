@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -10,34 +10,46 @@ import SignUpIn from './Components/Pages/SignUpIn';
 
 export const WebsiteName = "Power X";
 export const WebsiteSlogan = "Gym Website";
+export const SearchContext = createContext();
 
 function App() {
+    const [location, setLocation] = useState(null);
+
+    const [arrivalDate, setArrivalDate] = useState(null);
+    const [departureDate, setDepartureDate] = useState(null);
+
+    const [adultGuest, setAdultGuest] = useState(0);
+    const [childGuest, setChildGuest] = useState(0);
+    const [babyGuest, setBabyGuest] = useState(0);
+
     return (
-        <Router>
-            <Header></Header>
+        <SearchContext.Provider value={[location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest]}>
+            <Router>
+                <Header></Header>
 
-            <Switch>
-                <Route path="/experience">
-                    <HostExperience></HostExperience>
-                </Route>
+                <Switch>
+                    <Route path="/experience">
+                        <HostExperience></HostExperience>
+                    </Route>
 
-                <Route path="/help">
-                    <Help></Help>
-                </Route>
+                    <Route path="/help">
+                        <Help></Help>
+                    </Route>
 
-                <Route path="/sign">
-                    <SignUpIn></SignUpIn>
-                </Route>
+                    <Route path="/sign">
+                        <SignUpIn></SignUpIn>
+                    </Route>
 
-                <Route path="/">
-                    <Home></Home>
-                </Route>
+                    <Route path="/">
+                        <Home></Home>
+                    </Route>
 
-                {/* <Route path="/*">
+                    {/* <Route path="/*">
                         <NoMatch></NoMatch>
                     </Route> */}
-            </Switch>
-        </Router>
+                </Switch>
+            </Router>
+        </SearchContext.Provider>
     );
 }
 

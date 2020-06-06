@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RoomInHotelHostedByMatthew = {
-	id: 3, thumb: "https://a0.muscache.com/im/pictures/4eef07ed-a996-4a7d-b517-fae2947b545b.jpg?aki_policy=x_large", img: "https://a0.muscache.com/im/pictures/a601835b-06ef-44a1-a9b8-73fb3984c2dc.jpg?aki_policy=large", permalink: "Room-in-hotel-hosted-by-Matthew", title: "Room in Hotel Hosted by Matthew", location: "North Adelaide, South Australia, Australia", cost: 267, guests: 4, bedrooms: 5, beds: 5, baths: 3, reviews: 423, star: 3.88, advantage: { "Entaire Home": "You’ll have the apartment to yourself.", "Self Check-in": "You can check in with doorman", "Sparkling clean": "10 recent guest said this place was Sparkling clean", "Seawall is a Superhost": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests." }, rules: <>
+	id: 3, thumb: "https://a0.muscache.com/im/pictures/4eef07ed-a996-4a7d-b517-fae2947b545b.jpg?aki_policy=x_large", img: "https://a0.muscache.com/im/pictures/a601835b-06ef-44a1-a9b8-73fb3984c2dc.jpg?aki_policy=large", permalink: "room-in-hotel-hosted-by-matthew", title: "Room in Hotel Hosted by Matthew", city: "North Adelaide", location: "North Adelaide, South Australia, Australia", cost: 267, guests: 4, bedrooms: 5, beds: 5, baths: 3, reviews: 423, star: 3.88, advantage: { "Entire": "You’ll have the apartment to yourself.", "Self Check-in": "You can check in with doorman", "Sparkling clean": "10 recent guest said this place was Sparkling clean", "Seawall is a Superhost": "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests." }, rules: <>
 		<ul>
 			<li>Suitable for infants</li>
 			<li>Pets allowed</li>

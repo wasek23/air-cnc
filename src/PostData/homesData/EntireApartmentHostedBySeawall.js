@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EntireApartmentHostedBySeawall = {
-	id: 2, thumb: "https://a0.muscache.com/im/pictures/92de90e4-7442-44b2-bcb2-fc2f062a5efc.jpg?aki_policy=x_large", img: "https://a0.muscache.com/im/pictures/0125f23f-bf33-43f1-a984-911702f858bd.jpg?aki_policy=large", permalink: "Entire-apartment-hosted-by-Seawall", title: "Entire Apartment Hosted by Seawall", location: "Glenelg, South Australia, Australia", cost: 692, guests: 2, bedrooms: 1, beds: 1, baths: 1, reviews: 10, star: 2.1, advantage: { "Elevator": "This is one of a few places in the area that has this feature.", "Free cancellation for 48 hours": "After that, cancel up to 24 hours before check-in and get a full refund, minus the service fee.", "Sparkling clean": "10 recent guest said this place was Sparkling clean" }, rules: <>
+	id: 2, thumb: "https://a0.muscache.com/im/pictures/92de90e4-7442-44b2-bcb2-fc2f062a5efc.jpg?aki_policy=x_large", img: "https://a0.muscache.com/im/pictures/0125f23f-bf33-43f1-a984-911702f858bd.jpg?aki_policy=large", permalink: "entire-apartment-hosted-by-seawall", title: "Entire Apartment Hosted by Seawall", city: "Glenelg", location: "Glenelg, South Australia, Australia", cost: 692, guests: 2, bedrooms: 1, beds: 1, baths: 1, reviews: 10, star: 2.1, advantage: { "Elevator": "This is one of a few places in the area that has this feature.", "Free cancellation for 48 hours": "After that, cancel up to 24 hours before check-in and get a full refund, minus the service fee.", "Sparkling clean": "10 recent guest said this place was Sparkling clean" }, rules: <>
 		<ul>
 			<li>Suitable for infants</li>
 			<li>Pets allowed</li>
