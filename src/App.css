@@ -24,3 +24,43 @@
 .star svg{
 	color: #4EB8CB;
 }
+
+/* Single Home Result */
+.singleHomeResult{
+	border-bottom: 1px solid #DBDBDB;
+	grid-template-columns: 1fr 2fr;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	align-items: center;
+	grid-gap: 2rem;
+}
+.singleHomeResult:last-child{
+	border-bottom: none;
+}
+
+.singleHomeResult img {
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.singleHomeResult h5, 
+.singleHomeResult h6, 
+.singleHomeResult p{
+	margin-top: 10px;
+}
+.singleHomeResult .flex{
+	display: flex;
+	justify-content: space-between;
+}
+.singleHomeResult .flex h6 svg{
+	color: #7aef4e;
+}
+
+/* Home Detail */
+.singleHome .topImg{
+	display: flex;
+	align-items: center;
+}
+.singleHome .topImg img{
+	width: 50%;
+}

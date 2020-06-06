@@ -5,9 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
-    const [location, arrivalDate, departureDate, adultGuest, childGuest] = useContext(SearchContext);
+    const [location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest] = useContext(SearchContext);
+    const guests = adultGuest + childGuest;
+    const noUsed = { setLocation, setArrivalDate, setDepartureDate, setAdultGuest, setChildGuest, babyGuest, setBabyGuest };
 
-    const searchQuery = { location, arrivalDate, departureDate, guests: adultGuest + childGuest }
+    const searchHandle = () => {
+        document.querySelector('section.mainSection').style.display = 'block';
+        document.querySelector('section.searchResultSection').style.display = 'none';
+    }
 
     return (
         <header>
@@ -20,8 +25,8 @@ const Header = () => {
                     <label htmlFor="navToggle" className="navbarButton"><span className="navbarIcons">&nbsp;</span></label>
 
                     <ul className="navbarMenu">
-                        {(searchQuery.location && searchQuery.arrivalDate && searchQuery.departureDate && searchQuery.guests) ? <div className="card">
-                            <span>{location}</span> | <span>{arrivalDate} - {departureDate}</span> | <span>{searchQuery.guests} guests</span> <FontAwesomeIcon icon={faSearch} />
+                        {(location && arrivalDate && departureDate && guests) ? <div className="card">
+                            <span>{location}</span> <span className="date">{arrivalDate} - {departureDate}</span> <span>{guests} guests</span> <span onClick={searchHandle}><FontAwesomeIcon icon={faSearch} /></span>
                         </div> : <>
                                 <li><NavLink exact activeClassName='active' to="/">Host your home</NavLink></li>
 

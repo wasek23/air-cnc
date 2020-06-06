@@ -82,6 +82,10 @@ body {
   font-size: 1.3rem;
   color: #dfdfdf; }
 
+.textLight {
+  font-size: 1.4rem;
+  color: #888; }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700; }
 
@@ -90,6 +94,18 @@ h3 {
 
 h4 {
   text-transform: uppercase; }
+
+h5 {
+  font-size: 1.6rem; }
+
+h6 {
+  font-size: 1.4rem; }
+
+p {
+  line-height: 200%;
+  color: #333; }
+  p:not(:last-child) {
+    margin-bottom: 1rem; }
 
 .btn, .btn:link, .btn:visited {
   color: #fff;
@@ -201,7 +217,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all .5s ease-in-out; }
+  transition: all .5s ease-in-out;
+  position: relative; }
+
+.navbar .card {
+  padding: 1.5rem 2rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .navbar .card > * {
+    margin: 0 1rem; }
+  .navbar .card .date {
+    margin: 0 0rem;
+    padding: 0 1rem;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf; }
+  .navbar .card svg {
+    color: #38e182;
+    cursor: pointer; }
 
 .navbarMenu {
   list-style-type: none;

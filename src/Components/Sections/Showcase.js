@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import ExperiencePost from '../Posts/ExperiencePost';
 import HomePost from '../Posts/HomePost';
 
-import experiencesData from '../../PostData/experienceData';
-import homesData from '../../PostData/homesData';
+import getExperiencesData from '../../PostData/experienceData';
+import getHomesData from '../../PostData/homesData';
 const Showcase = () => {
+    const experiencesData = getExperiencesData.slice(0, 4);
+    const homesData = getHomesData.slice(0, 3);
 
     return (
         <div className="showcase">

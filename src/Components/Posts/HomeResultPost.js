@@ -1,18 +1,17 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faDollarSign } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const HomeResultPost = props => {
     const { thumb, permalink, title, guests, bedrooms, beds, baths, cost, reviews, star } = props.homesData;
 
-    console.log(props.homesData);
-
     return (
         <article className="singleHomeResult grid">
-            <img src={thumb} alt={title} />
+            <Link to={"/home/" + permalink} target="_blank" rel="noreferrer noopener"><img src={thumb} alt={title} /></Link>
             <div>
-                <h5>{title}</h5>
-                <p><span>{guests} guests</span> <span>{bedrooms} bedrooms</span> <span>{beds} beds</span> <span>{baths} baths</span></p>
+                <Link to={"/home/" + permalink} target="_blank" rel="noreferrer noopener"><h5>{title}</h5></Link>
+                <p className="textLight"><span>{guests} guests</span> <span>{bedrooms} bedrooms</span> <span>{beds} beds</span> <span>{baths} baths</span></p>
 
                 <div className="flex">
                     <h6><FontAwesomeIcon icon={faStar} /> {star} ({reviews})</h6>

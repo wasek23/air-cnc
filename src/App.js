@@ -4,9 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from './Components/Header';
 import Home from './Components/Pages/Home';
+import HomePostDetail from './Components/Posts/HomePostDetail';
 import HostExperience from './Components/Pages/HostExperience';
 import Help from './Components/Pages/Help';
 import SignUpIn from './Components/Pages/SignUpIn';
+
+import homesData from './PostData/homesData';
 
 export const WebsiteName = "Power X";
 export const WebsiteSlogan = "Gym Website";
@@ -21,6 +24,8 @@ function App() {
     const [adultGuest, setAdultGuest] = useState(0);
     const [childGuest, setChildGuest] = useState(0);
     const [babyGuest, setBabyGuest] = useState(0);
+
+    const homeDetail = homesData.filter(singleHome => "/home/" + singleHome.permalink === window.location.pathname);
 
     return (
         <SearchContext.Provider value={[location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest]}>
@@ -39,6 +44,10 @@ function App() {
                     <Route path="/sign">
                         <SignUpIn></SignUpIn>
                     </Route>
+
+                    {homesData.length !== 0 && <Route path="/home/*">
+                        {homeDetail.map(singleHome => <HomePostDetail homeData={singleHome} key={singleHome.id}></HomePostDetail>)}
+                    </Route>}
 
                     <Route path="/">
                         <Home></Home>

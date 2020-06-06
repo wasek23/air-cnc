@@ -13,11 +13,10 @@ const SearchTerms = () => {
     today = yyyy + '-' + mm + '-' + dd;
 
     const [location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest] = useContext(SearchContext);
-
-    const searchQuery = { location, arrivalDate, departureDate, guests: adultGuest + childGuest }
+    const guests = adultGuest + childGuest;
 
     const searchSubmit = () => {
-        if (searchQuery.location && searchQuery.arrivalDate && searchQuery.departureDate && searchQuery.guests) {
+        if (location && arrivalDate && departureDate && guests) {
             document.querySelector('section.mainSection').style.display = 'none';
             document.querySelector('section.searchResultSection').style.display = 'block';
         } else {

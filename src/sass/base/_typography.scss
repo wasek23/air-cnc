@@ -25,6 +25,11 @@ body{
     color: #dfdfdf;
 }
 
+.textLight{
+    font-size: 1.4rem;
+    color: #888;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-weight: 700;
 }
@@ -35,7 +40,12 @@ h3{
 h4{
     text-transform: uppercase;
 }
-
+h5{
+    font-size: $defaultFontSize;
+}
+h6{
+    font-size: 1.4rem;
+}
 
 // h1{
 //     text-transform: uppercase;
@@ -77,21 +87,11 @@ h4{
 //     }
 // }
 
+p{
+    line-height: 200%;
+    color: #333;
 
-// h4{
-//     font-size: $defaultFontSize;
-//     text-transform: uppercase;
-//     font-weight: 400;
-// }
-// h5{
-//     font-size: 1.5rem;
-// }
-
-// p{
-//     line-height: 200%;
-//     color: $colorSecondary;
-
-//     &:not(:last-child){
-//         margin-bottom: 1rem;
-//     }
-// }
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}

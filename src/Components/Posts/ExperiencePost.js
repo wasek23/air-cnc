@@ -13,7 +13,7 @@ const ExperiencePost = props => {
             <p className="cost">${cost} per person</p>
 
             <div className="star">
-                <FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} />{star}
+                <FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} /><FontAwesomeIcon icon={faStar} />{star}
             </div>
 
         </article>
