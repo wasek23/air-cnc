@@ -102,10 +102,8 @@ h6 {
   font-size: 1.4rem; }
 
 p {
-  line-height: 200%;
-  color: #333; }
-  p:not(:last-child) {
-    margin-bottom: 1rem; }
+  line-height: 150%;
+  color: #6f6f6f; }
 
 .btn, .btn:link, .btn:visited {
   color: #fff;
@@ -158,7 +156,20 @@ p {
   margin-bottom: 1.5rem; }
 
 .searchResultSection {
-  display: none; }
+  display: none;
+  position: relative;
+  min-height: calc(100vh - 7rem); }
+  .searchResultSection .container {
+    grid-gap: 4rem; }
+  .searchResultSection .searchResultTop {
+    margin: 2rem 0; }
+
+.map {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  right: 0; }
 
 .searchTerms > h3 {
   margin-bottom: 3rem; }
@@ -206,6 +217,42 @@ p {
 
 .searchTerms > button {
   width: 100%; }
+
+.mainContent {
+  padding: 5rem 1.5rem; }
+  .mainContent .advantage {
+    padding: 2rem 0;
+    margin: 1rem 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf; }
+    .mainContent .advantage ul {
+      list-style-type: none; }
+      .mainContent .advantage ul li {
+        line-height: 150%; }
+        .mainContent .advantage ul li h5 {
+          margin-top: 1rem; }
+  .mainContent .card {
+    width: 40rem;
+    height: fit-content;
+    margin: 2rem auto; }
+    .mainContent .card > p {
+      margin-bottom: 1rem; }
+    .mainContent .card .border {
+      border: 1px solid #dfdfdf;
+      border-radius: .5rem;
+      padding: 1rem 2rem;
+      margin-bottom: 2rem; }
+    .mainContent .card .cost, .mainContent .card .total {
+      margin-bottom: 1rem;
+      padding: 0 2rem;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .mainContent .card .cost {
+      border-bottom: 1px solid #dfdfdf; }
+    .mainContent .card .btn {
+      width: 100%; }
 
 header {
   width: 100%;

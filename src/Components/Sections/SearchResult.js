@@ -4,10 +4,9 @@ import getHomesData from '../../PostData/homesData';
 import HomeResultPost from '../Posts/HomeResultPost';
 
 const SearchResult = () => {
-    const [location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest] = useContext(SearchContext);
+    const [srcLocation, setSrcLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest] = useContext(SearchContext);
     const guests = adultGuest + childGuest;
-    const loc = location !== null && location.toLowerCase();
-    const noUsed = { setLocation, setArrivalDate, setDepartureDate, setAdultGuest, setChildGuest, babyGuest, setBabyGuest };
+    const loc = srcLocation !== null && srcLocation.toLowerCase();
 
     const filterLocation = getHomesData.filter(item => item.location.toLowerCase().includes(loc));
     const homesData = filterLocation.filter(item => item.guests === guests);
@@ -16,7 +15,7 @@ const SearchResult = () => {
         <div>
             <div className="searchResultTop">
                 <p>{homesData.length} stays | {arrivalDate} - {departureDate} | {guests} guests</p>
-                <h3>Stay in {location}</h3>
+                <h3>Stay in {srcLocation}</h3>
             </div>
 
             <div className="searchResultPosts">

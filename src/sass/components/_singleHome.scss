@@ -1,0 +1,55 @@
+.mainContent{
+    padding: 5rem 1.5rem;
+
+    .advantage{
+        padding: 2rem 0;
+        margin: 1rem 0;
+        border-top: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;
+
+        ul{
+            list-style-type: none;
+
+            li{
+                line-height: 150%;
+                
+                h5{
+                    margin-top: 1rem;
+                }
+            }            
+        }
+    }
+
+    .card{
+        width: 40rem;
+        height: fit-content;
+        margin: 2rem auto;
+
+        >p{
+            margin-bottom: 1rem;
+        }
+
+        .border{
+            border: 1px solid #dfdfdf;
+            border-radius: .5rem;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cost, .total{
+            margin-bottom: 1rem;
+            padding: 0 2rem;
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cost{
+            border-bottom: 1px solid #dfdfdf;
+        }
+
+        .btn{
+            width: 100%;
+        }
+    }
+}

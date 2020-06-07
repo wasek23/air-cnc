@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faDollarSign } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { CleaningFee, ServiceFee } from '../../App';
 
 const HomeResultPost = props => {
     const { thumb, permalink, title, guests, bedrooms, beds, baths, cost, reviews, star } = props.homesData;
@@ -18,7 +19,7 @@ const HomeResultPost = props => {
 
                     <div>
                         <h5><FontAwesomeIcon icon={faDollarSign} /> {cost} / night</h5>
-                        <p className="textMuted"><FontAwesomeIcon icon={faDollarSign} /> {cost * guests} total</p>
+                        <p className="textMuted"><FontAwesomeIcon icon={faDollarSign} /> {(cost * guests) + CleaningFee + ServiceFee} total</p>
                     </div>
                 </div>
             </div>

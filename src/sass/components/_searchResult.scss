@@ -1,3 +1,21 @@
 .searchResultSection{
     display: none;
+    position: relative;
+    min-height: calc(100vh - 7rem);
+
+    .container{
+        grid-gap: 4rem;
+    }
+
+    .searchResultTop{
+        margin: 2rem 0;
+    }
+}
+
+.map{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
 }

@@ -13,10 +13,12 @@ import homesData from './PostData/homesData';
 
 export const WebsiteName = "Power X";
 export const WebsiteSlogan = "Gym Website";
+export const CleaningFee = 10;
+export const ServiceFee = 20;
 export const SearchContext = createContext();
 
 function App() {
-    const [location, setLocation] = useState(null);
+    const [srcLocation, setSrcLocation] = useState(null);
 
     const [arrivalDate, setArrivalDate] = useState(null);
     const [departureDate, setDepartureDate] = useState(null);
@@ -28,7 +30,7 @@ function App() {
     const homeDetail = homesData.filter(singleHome => "/home/" + singleHome.permalink === window.location.pathname);
 
     return (
-        <SearchContext.Provider value={[location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest]}>
+        <SearchContext.Provider value={[srcLocation, setSrcLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest]}>
             <Router>
                 <Header></Header>
 

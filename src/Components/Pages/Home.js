@@ -2,6 +2,7 @@ import React from 'react';
 import SearchTerms from '../Sections/SearchTerms';
 import Showcase from '../Sections/Showcase';
 import SearchResult from '../Sections/SearchResult';
+import Map from '../Sections/Map';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
                 <section className="searchResultSection">
                     <div className="container grid grid2">
                         <SearchResult></SearchResult>
+                        <Map></Map>
                     </div>
                 </section>
             </main>

@@ -12,11 +12,11 @@ const SearchTerms = () => {
     if (mm < 10) { mm = '0' + mm }
     today = yyyy + '-' + mm + '-' + dd;
 
-    const [location, setLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest] = useContext(SearchContext);
+    const [srcLocation, setSrcLocation, arrivalDate, setArrivalDate, departureDate, setDepartureDate, adultGuest, setAdultGuest, childGuest, setChildGuest, babyGuest, setBabyGuest] = useContext(SearchContext);
     const guests = adultGuest + childGuest;
 
     const searchSubmit = () => {
-        if (location && arrivalDate && departureDate && guests) {
+        if (srcLocation && arrivalDate && departureDate && guests) {
             document.querySelector('section.mainSection').style.display = 'none';
             document.querySelector('section.searchResultSection').style.display = 'block';
         } else {
@@ -31,7 +31,7 @@ const SearchTerms = () => {
             <div className="searchLocation">
                 <div className="card">
                     <label htmlFor="location"><h4>Location</h4></label>
-                    <input type="text" name="location" id="location" placeholder="Add ciy, Landmark or address" onChange={e => setLocation(e.target.value)} />
+                    <input type="text" name="location" id="location" placeholder="Add ciy, Landmark or address" onChange={e => setSrcLocation(e.target.value)} />
                 </div> {/* Card */}
             </div> {/* Search Location */}
 
